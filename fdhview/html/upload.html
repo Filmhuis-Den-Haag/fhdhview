@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Upload Schedule</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body style="font-family: sans-serif; max-width: 480px; margin: 40px auto;">
+        <img src="/static/Logo.svg" alt="Logo" style="filter: invert(1);">
+        <br>
+        <br>
+        <h1>Upload a schedule</h1>
+        <form id="upload-form">
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+        </form>
+        <p id="message"></p>
+        <script>
+        const form = document.getElementById("upload-form");
+        const message = document.getElementById("message");
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            message.textContent = "Uploading...";
+            try {
+            const res = await fetch("/admin/upload", { method: "POST", body: new FormData(form) });
+            const data = await res.json();
+            if (res.ok) {
+                message.style.color = "green";
+                message.textContent = `Uploaded ${data.filename} (${data.size} bytes).`;
+            } else {
+                message.style.color = "red";
+                message.textContent = data.detail;
+            }
+            } catch {
+            message.style.color = "red";
+            message.textContent = "Upload failed (network error).";
+            }
+        };
+        </script>
+    </body>
+</html>

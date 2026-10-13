@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AAMPos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pos_schema.xsd">
+  <sessions>
+    <session>
+      <id>12065371</id>
+      <screen_identifier>DenHaag_zaal_3</screen_identifier>
+      <complex_identifier>Filmhuis Den Haag</complex_identifier>
+      <start>202608201400</start>
+      <end>202608201534</end>
+      <feature_duration>5280</feature_duration>
+      <title>Mulan - EPIC SUMMER</title>
+      <rating>0</rating>
+      <seats_available>40</seats_available>
+      <seats_sold>14</seats_sold>
+      <session_attributes>
+        <session_attribute>2D</session_attribute>
+        <session_attribute>Angst</session_attribute>
+        <session_attribute>Animation</session_attribute>
+        <session_attribute>Geweld</session_attribute>
+        <session_attribute>vanaf 6 jaar</session_attribute>
+      </session_attributes>
+    </session>
+    <session>
+      <id>12065374</id>
+      <screen_identifier>DenHaag_zaal_1</screen_identifier>
+      <complex_identifier>Filmhuis Den Haag</complex_identifier>
+      <start>202608212030</start>
+      <end>202608212339</end>
+      <feature_duration>10980</feature_duration>
+      <title>Apocalypse Now: The Final Cut - EPIC SUMMER</title>
+      <rating>0</rating>
+      <seats_available>98</seats_available>
+      <seats_sold>56</seats_sold>
+      <session_attributes>
+        <session_attribute>2D</session_attribute>
+        <session_attribute>Geweld</session_attribute>
+        <session_attribute>Grof taalgebruik</session_attribute>
+        <session_attribute>vanaf 16 jaar</session_attribute>
+        <session_attribute>War</session_attribute>
+      </session_attributes>
+    </session>
+    <session>
+      <id>12065375</id>
+      <screen_identifier>DenHaag_zaal_3</screen_identifier>
+      <complex_identifier>Filmhuis Den Haag</complex_identifier>
+      <start>202608211815</start>
+      <end>202608211957</end>
+      <feature_duration>5760</feature_duration>
+      <title>Hearts of Darkness: A Filmmaker's Apocalypse - EPIC SUMMER</title>
+      <rating>0</rating>
+      <seats_available>40</seats_available>
+      <seats_sold>23</seats_sold>
+      <session_attributes>
+        <session_attribute>2D</session_attribute>
+        <session_attribute>Documentary</session_attribute>
+      </session_attributes>
+    </session>
+  </sessions>
+</AAMPos>

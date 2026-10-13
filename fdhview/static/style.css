@@ -1,0 +1,69 @@
+:root {
+  --bg: #dfe2e9;
+  --bg-side: #d6dae2;
+  --ink: #111318;
+  --muted: #8a8f99;
+  --rule: #9aa0aa;
+  --badge: #101318;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: "Poppins", "Futura", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  overflow: hidden;
+}
+.screen { display: grid; grid-template-columns: 1fr 340px; height: 100vh; }
+
+/* ---------- left: film list ---------- */
+.programme { padding: 28px 40px 40px 48px; display: flex; flex-direction: column; }
+.programme h1 {
+  font-size: 92px; font-weight: 600; letter-spacing: 6px;
+  text-transform: uppercase; line-height: 1; margin-bottom: 18px;
+}
+.film {
+  display: grid;
+  grid-template-columns: 90px 60px 1fr 170px;
+  gap: 12px; align-items: start;
+  padding: 16px 0 18px;
+  border-top: 1px solid var(--rule);
+}
+.times { line-height: 1.25; }
+.times .start { font-size: 20px; font-weight: 600; }
+.times .end   { font-size: 20px; color: var(--muted); }
+.icons { display: flex; gap: 6px; padding-top: 3px; }
+.icons .dot {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--badge); color: #fff;
+  font-size: 13px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+}
+.info { padding-top: 3px; }
+.info .title { font-size: 22px; font-weight: 500; }
+.info .meta {
+  margin-top: 14px; font-size: 13px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  display: flex; gap: 18px; align-items: center;
+}
+.pill {
+  background: #b9bfc9; border-radius: 14px;
+  padding: 4px 14px; font-size: 12px; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase;
+}
+.badge-last {
+  justify-self: end; align-self: start; margin-top: 3px;
+  background: var(--badge); color: #fff;
+  font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+  padding: 6px 12px; text-transform: uppercase; white-space: nowrap;
+}
+
+/* ---------- right: sidebar ---------- */
+.sidebar { background: var(--bg-side); padding: 30px 36px; display: flex; flex-direction: column; }
+.sidebar .top { display: flex; justify-content: space-between; align-items: flex-start; }
+.sidebar .date { font-size: 44px; font-weight: 600; letter-spacing: 4px; }
+.sidebar .logo { font-size: 13px; font-weight: 600; letter-spacing: 1px; text-align: right; line-height: 1.3; text-transform: uppercase; }
+.sidebar h2 { margin-top: 56px; font-size: 20px; font-weight: 600; margin-bottom: 14px; }
+.price-row { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 9px; font-size: 17px; }
+.price-row .price { white-space: nowrap; }
+.sidebar h3 { margin-top: 34px; font-size: 17px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
