@@ -24,15 +24,26 @@ body {
 }
 .film {
   display: grid;
-  grid-template-columns: 90px 60px 1fr 170px;
-  gap: 12px; align-items: start;
+  grid-template-columns: 90px 160px 1fr 170px;
+  gap: 14px; align-items: start;
   padding: 16px 0 18px;
   border-top: 1px solid var(--rule);
 }
 .times { line-height: 1.25; }
 .times .start { font-size: 20px; font-weight: 600; }
 .times .end   { font-size: 20px; color: var(--muted); }
-.icons { display: flex; gap: 6px; padding-top: 3px; }
+.icons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  align-items: center;
+  padding-top: 3px;
+}
+.icons .kijkwijzer {
+  width: 26px; height: 26px;
+  object-fit: contain;
+  display: block;
+}
 .icons .dot {
   width: 26px; height: 26px; border-radius: 50%;
   background: var(--badge); color: #fff;
@@ -49,7 +60,8 @@ body {
 .pill {
   background: #b9bfc9; border-radius: 14px;
   padding: 4px 14px; font-size: 12px; font-weight: 600;
-  letter-spacing: 1px; text-transform: uppercase;
+  letter-spacing: 1px;
+  text-transform: none; /* "Boutique Cinema" reads like the photo */
 }
 .badge-last {
   justify-self: end; align-self: start; margin-top: 3px;
