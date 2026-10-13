@@ -27,7 +27,7 @@ async def get_infodesk_screenings(
         select(Screening)
         .where(Screening.start > now)
         .order_by(col(Screening.start))
-        .limit(6)
+        .limit(7)
     )
     screenings = await session.exec(query)
     return [ScreeningRead.model_validate(s) for s in screenings.all()]

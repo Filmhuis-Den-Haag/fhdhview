@@ -40,8 +40,9 @@ function renderPrices(prices) {
 
 function renderClock() {
   const d = new Date();
-  document.getElementById("date").textContent =
-    d.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
+  const hh = String(d.getHours()).padStart(2, "0");
+  const mm = String(d.getMinutes()).padStart(2, "0");
+  document.getElementById("date").textContent = `${hh} ${mm}`;
 }
 
 async function refresh() {

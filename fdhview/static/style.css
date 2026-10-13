@@ -1,6 +1,6 @@
 :root {
   --bg: #dfe2e9;
-  --bg-side: #d6dae2;
+  --bg-side: #a8adb1;
   --ink: #111318;
   --muted: #8a8f99;
   --rule: #9aa0aa;
@@ -20,9 +20,13 @@ body {
 .programme { padding: 28px 40px 40px 48px; display: flex; flex-direction: column; }
 .programme h1 {
   font-size: 92px; font-weight: 600; letter-spacing: 6px;
-  text-transform: uppercase; line-height: 1; margin-bottom: 18px;
+  text-transform: uppercase; line-height: 1;
+  margin-bottom: -27px;      /* was 18px — lets the list overlap the letters */
+  position: relative; z-index: 0;
 }
 .film {
+  position: relative;
+  background: var(--bg);
   display: grid;
   grid-template-columns: 90px 160px 1fr 170px;
   gap: 14px; align-items: start;
@@ -58,22 +62,33 @@ body {
   display: flex; gap: 18px; align-items: center;
 }
 .pill {
-  background: #b9bfc9; border-radius: 14px;
+  background: var(--bg-side); border-radius: 14px;
   padding: 4px 14px; font-size: 12px; font-weight: 600;
   letter-spacing: 1px;
   text-transform: none; /* "Boutique Cinema" reads like the photo */
 }
 .badge-last {
-  justify-self: end; align-self: start; margin-top: 3px;
+  justify-self: end; align-self: start; margin-top: -16px;
   background: var(--badge); color: #fff;
   font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
   padding: 6px 12px; text-transform: uppercase; white-space: nowrap;
 }
 
 /* ---------- right: sidebar ---------- */
-.sidebar { background: var(--bg-side); padding: 30px 36px; display: flex; flex-direction: column; }
-.sidebar .top { display: flex; justify-content: space-between; align-items: flex-start; }
-.sidebar .date { font-size: 44px; font-weight: 600; letter-spacing: 4px; }
+.sidebar { background: var(--bg-side); padding: 30px 32px; display: flex; flex-direction: column; }
+.sidebar .top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 4px;
+}
+.sidebar .date {
+  font-size: 56px; font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  white-space: nowrap;
+}
 .sidebar .logo { font-size: 13px; font-weight: 600; letter-spacing: 1px; text-align: right; line-height: 1.3; text-transform: uppercase; }
 .sidebar h2 { margin-top: 56px; font-size: 20px; font-weight: 600; margin-bottom: 14px; }
 .price-row { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 9px; font-size: 17px; }
