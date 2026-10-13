@@ -18,4 +18,6 @@ The endpoint serves the 10 upcoming screenings for the day. The frontend automat
 
 * GET `/admin` - upload form protected with Basic Auth.
 * POST `/admin/upload` - upload endpoint protected with Basic Auth
+* GET `/info` - serves desk info endpoint
 * GET `/api/screenings` - serves JSON with upcoming 10 films for today
+* GET `/api/screenings/prices` - serves JSON with pricing data

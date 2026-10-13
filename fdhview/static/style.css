@@ -14,14 +14,14 @@ body {
   color: var(--ink);
   overflow: hidden;
 }
-.screen { display: grid; grid-template-columns: 1fr 420px; height: 100vh; }
+.screen { display: grid; grid-template-columns: 1fr 30%; height: 100vh; }
 
 /* ---------- left: film list ---------- */
 .programme { padding: 28px 40px 40px 48px; display: flex; flex-direction: column; }
 .programme h1 {
-  font-size: 92px; font-weight: 600; letter-spacing: 6px;
+  font-size: 122px; font-weight: 600; letter-spacing: 6px;
   text-transform: uppercase; line-height: 1;
-  margin-bottom: -27px;      /* was 18px — lets the list overlap the letters */
+  margin-bottom: -35px;
   position: relative; z-index: 0;
 }
 .film {
@@ -33,6 +33,7 @@ body {
   padding: 16px 0 18px;
   border-top: 1px solid var(--rule);
 }
+.film-spacer { min-height: 0; padding: 0; }
 .times { line-height: 1.25; }
 .times .start { font-size: 20px; font-weight: 600; }
 .times .end   { font-size: 20px; color: var(--muted); }
@@ -67,6 +68,9 @@ body {
   letter-spacing: 1px;
   text-transform: none; /* "Boutique Cinema" reads like the photo */
 }
+.subs {
+  margin-left: 18px;
+}
 .badge-last {
   justify-self: end; align-self: start; margin-top: -16px;
   background: var(--badge); color: #fff;
@@ -75,7 +79,12 @@ body {
 }
 
 /* ---------- right: sidebar ---------- */
-.sidebar { background: var(--bg-side); padding: 30px 32px; display: flex; flex-direction: column; }
+.sidebar {
+  background: var(--bg-side);
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+}
 .sidebar .top {
   display: grid;
   grid-template-columns: auto 1fr;

@@ -13,7 +13,7 @@ function kijkwijzerIcons(codes) {
 }
 
 function renderFilms(films) {
-  document.getElementById("films").innerHTML = films.map(f => {
+  const rows = (films || []).map(f => {
     const isBoutique = f.screen === "6";
     const ratio = f.seats_sold / f.seats_total;
     const start = new Date(f.start);          // "2026-10-13T18:00:00" parses as local time
@@ -34,12 +34,14 @@ function renderFilms(films) {
           ${isBoutique
             ? `<span class="pill">Zaal 6 - Boutique Cinema</span>`
             : `<span class="zaal">Zaal ${f.screen}</span>`}
-          ${f.en_subs ? "<span>EN subs</span>" : ""}
+          ${f.en_subs ? "<span class='subs'>EN subs</span>" : ""}
         </div>
       </div>
       ${badge}
     </div>`;
   }).join("");
+  document.getElementById("films").innerHTML =
+  rows + `<div class="film" "film-spacer" aria-hidden="true"></div>`;
 }
 function renderPrices(prices) {
   const row = p => `<div class="price-row"><span>${p.label}</span><span class="price">${p.price}</span></div>`;
