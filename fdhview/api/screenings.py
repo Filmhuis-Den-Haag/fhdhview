@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, Depends
@@ -22,12 +22,14 @@ async def get_infodesk_screenings(
     session: AsyncSession = Depends(get_session)
 ) -> list[ScreeningRead]:
     now = datetime.now(tz=ZoneInfo(settings.timezone))
+    today = now.date()
 
     query = (
         select(Screening)
         .where(Screening.start > now)
+        .where(Screening.start < today + timedelta(days=1))
         .order_by(col(Screening.start))
-        .limit(7)
+        .limit(8)
     )
     screenings = await session.exec(query)
     return [ScreeningRead.model_validate(s) for s in screenings.all()]
