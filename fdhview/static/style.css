@@ -14,7 +14,7 @@ body {
   color: var(--ink);
   overflow: hidden;
 }
-.screen { display: grid; grid-template-columns: 1fr 340px; height: 100vh; }
+.screen { display: grid; grid-template-columns: 1fr 420px; height: 100vh; }
 
 /* ---------- left: film list ---------- */
 .programme { padding: 28px 40px 40px 48px; display: flex; flex-direction: column; }
@@ -79,17 +79,31 @@ body {
 .sidebar .top {
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: baseline;
-  gap: 20px;
+  align-items: start;
+  gap: 24px;
   margin-bottom: 4px;
 }
 .sidebar .date {
-  font-size: 56px; font-weight: 600;
-  font-variant-numeric: tabular-nums;
+  font-size: 56px;
+  font-weight: 600;
   line-height: 1;
-  white-space: nowrap;
 }
-.sidebar .logo { font-size: 13px; font-weight: 600; letter-spacing: 1px; text-align: right; line-height: 1.3; text-transform: uppercase; }
+.sidebar .date .colon {
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.sidebar .logo {
+  filter: invert(1);
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+.sidebar .logo img {
+  height: 46px;
+  width: auto;
+}
 .sidebar h2 { margin-top: 56px; font-size: 20px; font-weight: 600; margin-bottom: 14px; }
 .price-row { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 9px; font-size: 17px; }
 .price-row .price { white-space: nowrap; }

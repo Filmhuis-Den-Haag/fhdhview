@@ -51,7 +51,7 @@ function renderClock() {
   const d = new Date();
   const hh = String(d.getHours()).padStart(2, "0");
   const mm = String(d.getMinutes()).padStart(2, "0");
-  document.getElementById("date").textContent = `${hh} ${mm}`;
+  document.getElementById("date").innerHTML = `${hh}<span class="colon">:</span>${mm}`;
 }
 
 async function refresh() {
@@ -68,6 +68,7 @@ async function refresh() {
 }
 
 renderClock();
+setInterval(renderClock, 1_000);  // every second: updates minutes + blinks the colon
 refresh();                        // initial paint
 setInterval(refresh, POLL_MS);    // poll every 5 minutes
 setInterval(renderClock, 30_000); // keep the clock accurate
