@@ -15,6 +15,15 @@ function kijkwijzerIcons(codes) {
 function renderFilms(films) {
   document.getElementById("films").innerHTML = films.map(f => {
     const isBoutique = f.screen === "6";
+    const ratio = f.seats_sold / f.seats_total;
+    const start = new Date(f.start);          // "2026-10-13T18:00:00" parses as local time
+    const minsUntil = (start - new Date()) / 60000;
+    const badge = ratio >= 1
+    ? '<div class="badge-last uitverkocht">Uitverkocht</div>'
+    : ratio > 0.85 || minsUntil <= 15 && minsUntil > 0
+        ? '<div class="badge-last">Laatste kaarten</div>'
+        : "<div></div>";
+
     return `
     <div class="film">
       <div class="times"><div class="start">${hhmm(f.start)}</div><div class="end">${hhmm(f.end)}</div></div>
@@ -28,7 +37,7 @@ function renderFilms(films) {
           ${f.en_subs ? "<span>EN subs</span>" : ""}
         </div>
       </div>
-      ${f.seats_sold / f.seats_total > 0.85 ? '<div class="badge-last">Laatste kaarten</div>' : "<div></div>"}
+      ${badge}
     </div>`;
   }).join("");
 }
