@@ -9,7 +9,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { height: 100%; }
 body {
-  font-family: "Poppins", "Futura", sans-serif;
+  font-family: "Figtree", "Futura", sans-serif;
   background: var(--bg);
   color: var(--ink);
   overflow: hidden;
@@ -19,9 +19,9 @@ body {
 /* ---------- left: film list ---------- */
 .programme { padding: 28px 40px 40px 48px; display: flex; flex-direction: column; }
 .programme h1 {
-  font-size: 122px; font-weight: 600; letter-spacing: 6px;
+  font-size: 152px; font-weight: 600; letter-spacing: 6px;
   text-transform: uppercase; line-height: 1;
-  margin-bottom: -35px;
+  margin-bottom: -50px;
   position: relative; z-index: 0;
 }
 .film {
@@ -35,8 +35,8 @@ body {
 }
 .film-spacer { min-height: 0; padding: 0; }
 .times { line-height: 1.25; }
-.times .start { font-size: 20px; font-weight: 600; }
-.times .end   { font-size: 20px; color: var(--muted); }
+.times .start { font-size: 25px; font-weight: 600; }
+.times .end   { font-size: 25px; color: var(--muted); }
 .icons {
   display: flex;
   flex-wrap: nowrap;
@@ -52,19 +52,19 @@ body {
 .icons .dot {
   width: 26px; height: 26px; border-radius: 50%;
   background: var(--badge); color: #fff;
-  font-size: 13px; font-weight: 600;
+  font-size: 18px; font-weight: 600;
   display: flex; align-items: center; justify-content: center;
 }
 .info { padding-top: 3px; }
-.info .title { font-size: 22px; font-weight: 500; }
+.info .title { font-size: 25px; font-weight: 500; }
 .info .meta {
-  margin-top: 14px; font-size: 13px; font-weight: 600;
+  margin-top: 14px; font-size: 18px; font-weight: 400;
   letter-spacing: 1.5px; text-transform: uppercase;
   display: flex; gap: 18px; align-items: center;
 }
 .pill {
   background: var(--bg-side); border-radius: 14px;
-  padding: 4px 14px; font-size: 12px; font-weight: 600;
+  padding: 4px 14px; font-size: 18px; font-weight: 600;
   letter-spacing: 1px;
   text-transform: none; /* "Boutique Cinema" reads like the photo */
 }
@@ -74,7 +74,7 @@ body {
 .badge-last {
   justify-self: end; align-self: start; margin-top: -16px;
   background: var(--badge); color: #fff;
-  font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+  font-size: 15px; font-weight: 600; letter-spacing: 1.5px;
   padding: 6px 12px; text-transform: uppercase; white-space: nowrap;
 }
 
@@ -93,8 +93,8 @@ body {
   margin-bottom: 4px;
 }
 .sidebar .date {
-  font-size: 56px;
-  font-weight: 600;
+  font-size: 66px;
+  font-weight: 700;
   line-height: 1;
 }
 .sidebar .date .colon {
@@ -113,7 +113,7 @@ body {
   height: 46px;
   width: auto;
 }
-.sidebar h2 { margin-top: 56px; font-size: 20px; font-weight: 600; margin-bottom: 14px; }
-.price-row { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 9px; font-size: 17px; }
+.sidebar h2 { margin-top: 56px; font-size: 28px; font-weight: 600; margin-bottom: 14px; }
+.price-row { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 9px; font-size: 20px; }
 .price-row .price { white-space: nowrap; }
-.sidebar h3 { margin-top: 34px; font-size: 17px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+.sidebar h3 { margin-top: 34px; font-size: 20px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
