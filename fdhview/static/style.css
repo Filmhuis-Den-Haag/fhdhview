@@ -58,15 +58,15 @@ body {
 .info { padding-top: 3px; }
 .info .title { font-size: 25px; font-weight: 500; }
 .info .meta {
-  margin-top: 14px; font-size: 18px; font-weight: 400;
+  margin-top: 14px; font-size: 15px; font-weight: 400;
   letter-spacing: 1.5px; text-transform: uppercase;
   display: flex; gap: 18px; align-items: center;
 }
 .pill {
-  background: var(--bg-side); border-radius: 14px;
-  padding: 4px 14px; font-size: 18px; font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: none; /* "Boutique Cinema" reads like the photo */
+  background: var(--bg-side); border-radius: 12px;
+  padding: 4px 14px;
+  font-weight: 600;
+  text-transform: none;
 }
 .subs {
   margin-left: 18px;
