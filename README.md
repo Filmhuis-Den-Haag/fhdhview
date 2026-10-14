@@ -12,7 +12,11 @@ The endpoint serves the 10 upcoming screenings for the day. The frontend automat
 
 ## Run
 
-`poetry run uvicorn fdhview.main:app --reload`
+For development run the application locally:
+
+```sh
+poetry run uvicorn fdhview.main:app --reload
+```
 
 ## Endpoints
 
@@ -21,3 +25,11 @@ The endpoint serves the 10 upcoming screenings for the day. The frontend automat
 * GET `/info` - serves desk info endpoint
 * GET `/api/screenings` - serves JSON with upcoming 10 films for today
 * GET `/api/screenings/prices` - serves JSON with pricing data
+
+## Docker
+
+Run the container with docker-compose:
+
+```sh
+docker compose -f docker/docker-compose.yml up
+```
