@@ -26,7 +26,7 @@ async def get_infodesk_screenings(
 
     query = (
         select(Screening)
-        .where(Screening.start > now)
+        .where(Screening.start > now - timedelta(minutes=10))
         .where(Screening.start < today + timedelta(days=1))
         .order_by(col(Screening.start))
         .limit(8)
