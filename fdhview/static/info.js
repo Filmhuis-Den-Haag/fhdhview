@@ -20,9 +20,7 @@ function renderFilms(films) {
     const minsUntil = (start - new Date()) / 60000;
     const badge = ratio >= 1
     ? '<div class="badge-last uitverkocht">Uitverkocht</div>'
-    : ratio > 0.85 || minsUntil <= 15 && minsUntil > 0
-        ? '<div class="badge-last">Laatste kaarten</div>'
-        : "<div></div>";
+    : "<div></div>";
 
     return `
     <div class="film">

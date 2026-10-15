@@ -107,7 +107,7 @@ body {
   filter: invert(1);
   display: flex;
   justify-content: flex-end;
-  padding-top: 4px;
+  padding-top: 11px;
 }
 .sidebar .logo img {
   height: 46px;
