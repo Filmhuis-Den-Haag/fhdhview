@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Filmhuis Den Haag
+# SPDX-License-Identifier:
+
 from datetime import datetime
 from typing import Annotated
 from zoneinfo import ZoneInfo

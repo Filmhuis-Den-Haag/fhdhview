@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Filmhuis Den Haag
+# SPDX-License-Identifier:
+
 from sqlmodel import delete
 from sqlmodel.ext.asyncio.session import AsyncSession
 

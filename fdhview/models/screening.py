@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Filmhuis Den Haag
+# SPDX-License-Identifier:
+
 from datetime import datetime
 
 import sqlalchemy as sa

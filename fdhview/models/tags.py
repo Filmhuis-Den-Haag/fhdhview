@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Filmhuis Den Haag
+# SPDX-License-Identifier:
+
 from fdhview.models.enums import KijkWijzer, Screen
 
 screens = {

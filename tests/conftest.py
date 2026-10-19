@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Filmhuis Den Haag
+# SPDX-License-Identifier:
+
 import asyncio
 from collections.abc import AsyncGenerator, Iterator
 

@@ -33,3 +33,11 @@ Run the container with docker-compose:
 ```sh
 docker compose -f docker/docker-compose.yml up
 ```
+
+## License
+
+The code for this repository is available under the <choose_license>.
+
+Figtree fonts in `fdhview/static/fonts/` are under the Open Font License.
+
+The logo in `fdhview/static/Logo.svg` is copyright of Filmhuis Den Haag and must be replaced.
