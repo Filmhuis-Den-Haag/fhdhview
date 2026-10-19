@@ -10,14 +10,6 @@ Backend has an API with a main ticketing booth overview and theater hall specifi
 
 The endpoint serves the 10 upcoming screenings for the day. The frontend automatically refreshes to update its view with the current information.
 
-## Run
-
-For development run the application locally:
-
-```sh
-poetry run uvicorn fdhview.main:app --reload
-```
-
 ## Endpoints
 
 * GET `/admin` - upload form protected with Basic Auth
@@ -26,6 +18,34 @@ poetry run uvicorn fdhview.main:app --reload
 * GET `/info` - serves desk info endpoint
 * GET `/api/screenings` - serves JSON with upcoming 10 films for today
 * GET `/api/screenings/prices` - serves JSON with pricing data
+
+## Run
+
+For development run the application locally:
+
+```sh
+poetry run uvicorn fdhview.main:app --reload
+```
+
+## Tests
+
+Test suite:
+
+```sh
+poetry run pytest
+```
+
+Style checks:
+
+```sh
+poetry run ruff check
+```
+
+Type checking:
+
+```sh
+poetry run mypy .
+```
 
 ## Docker
 
