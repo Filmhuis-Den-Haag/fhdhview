@@ -27,6 +27,7 @@ COPY --from=builder /app/pyproject.toml /app/poetry.lock ./
 COPY . /app
 
 RUN mkdir -p /data && chown appuser:appuser /data
+RUN apt update && apt install -y curl
 
 ENV PATH="/app/.venv/bin:$PATH"
 
