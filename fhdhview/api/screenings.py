@@ -8,10 +8,10 @@ from fastapi import APIRouter, Depends
 from sqlmodel import col, select
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from fdhview.api.deps import get_session
-from fdhview.core.config import settings
-from fdhview.models.screening import Screening
-from fdhview.schemas.screening import ScreeningRead
+from fhdhview.api.deps import get_session
+from fhdhview.core.config import settings
+from fhdhview.models.screening import Screening
+from fhdhview.schemas.screening import ScreeningRead
 
 router = APIRouter(prefix="/screenings", tags=["Screenings"])
 

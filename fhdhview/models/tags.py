@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2026 Filmhuis Den Haag
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-from fdhview.models.enums import KijkWijzer, Screen
+from fhdhview.models.enums import KijkWijzer, Screen
 
 screens = {
     'DenHaag_zaal_1': Screen.ONE,

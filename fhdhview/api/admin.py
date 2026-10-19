@@ -7,9 +7,9 @@ from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
 from fastapi.responses import FileResponse, JSONResponse
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from fdhview.api.deps import check_auth, get_session
-from fdhview.services.screenwriter.importer import import_sessions
-from fdhview.services.screenwriter.parser import XmlParseError, parse_screenwriter_xml
+from fhdhview.api.deps import check_auth, get_session
+from fhdhview.services.screenwriter.importer import import_sessions
+from fhdhview.services.screenwriter.parser import XmlParseError, parse_screenwriter_xml
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 

@@ -8,7 +8,7 @@ from zoneinfo import ZoneInfo
 from pydantic import BeforeValidator
 from pydantic_xml import BaseXmlModel, RootXmlModel, element, wrapped
 
-from fdhview.core.config import settings
+from fhdhview.core.config import settings
 
 DT = Annotated[datetime, BeforeValidator(lambda v: datetime.strptime(v, "%Y%m%d%H%M").replace(
     tzinfo=ZoneInfo(settings.timezone)

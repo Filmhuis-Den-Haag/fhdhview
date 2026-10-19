@@ -7,11 +7,11 @@ from pathlib import Path
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
-from fdhview.api.admin import router as admin_router
-from fdhview.api.health import router as health_router
-from fdhview.api.info import router as info_router
-from fdhview.api.screenings import router as screenings_router
-from fdhview.core.database import init_db
+from fhdhview.api.admin import router as admin_router
+from fhdhview.api.health import router as health_router
+from fhdhview.api.info import router as info_router
+from fhdhview.api.screenings import router as screenings_router
+from fhdhview.core.database import init_db
 
 
 @asynccontextmanager

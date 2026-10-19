@@ -4,10 +4,10 @@
 from sqlmodel import delete
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from fdhview.models.enums import Screen
-from fdhview.models.screening import KijkWijzer, Screening
-from fdhview.models.tags import kijkwijzer, screens
-from fdhview.services.screenwriter.schema import AAMPos
+from fhdhview.models.enums import Screen
+from fhdhview.models.screening import KijkWijzer, Screening
+from fhdhview.models.tags import kijkwijzer, screens
+from fhdhview.services.screenwriter.schema import AAMPos
 
 # Delimiters used to attach notes to titles
 DASH_DELIMITERS = (" - ", " – ", " — ", "- ")

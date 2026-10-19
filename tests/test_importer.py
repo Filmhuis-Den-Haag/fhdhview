@@ -6,8 +6,8 @@ from pathlib import Path
 
 import pytest
 
-from fdhview.services.screenwriter.importer import _clean_title
-from fdhview.services.screenwriter.schema import AAMPos
+from fhdhview.services.screenwriter.importer import _clean_title
+from fhdhview.services.screenwriter.schema import AAMPos
 
 
 def test_xml():

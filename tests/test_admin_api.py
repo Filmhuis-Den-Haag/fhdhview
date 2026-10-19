@@ -5,7 +5,7 @@ from pathlib import Path
 
 from fastapi.testclient import TestClient
 
-from fdhview.core.config import settings
+from fhdhview.core.config import settings
 
 AUTH = ("username", settings.api_password)
 

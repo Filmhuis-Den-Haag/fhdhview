@@ -5,7 +5,7 @@ from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 from sqlmodel import SQLModel
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from fdhview.core.config import settings
+from fhdhview.core.config import settings
 
 sqlite_url = f"sqlite+aiosqlite:///{settings.sql_file_name}"
 

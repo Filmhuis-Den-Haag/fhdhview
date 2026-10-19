@@ -7,7 +7,7 @@ import sqlalchemy as sa
 from pydantic import field_serializer, field_validator
 from sqlmodel import Field, SQLModel
 
-from fdhview.models.enums import KijkWijzer, Screen
+from fhdhview.models.enums import KijkWijzer, Screen
 
 
 class Screening(SQLModel, table=True):

@@ -1,4 +1,4 @@
-# FDH View
+# FHDH View
 
 ## Description
 
@@ -24,7 +24,7 @@ The endpoint serves the 10 upcoming screenings for the day. The frontend automat
 For development run the application locally:
 
 ```sh
-poetry run uvicorn fdhview.main:app --reload
+poetry run uvicorn fhdhview.main:app --reload
 ```
 
 ## Tests
@@ -59,6 +59,6 @@ docker compose -f docker/docker-compose.yml up
 
 The code for this repository is available under the `GNU Affero General Public License v3.0 or later`.
 
-Figtree fonts in `fdhview/static/fonts/` are under the `SIL Open Font License, Version 1.1`.
+Figtree fonts in `fhdhview/static/fonts/` are under the `SIL Open Font License, Version 1.1`.
 
-The logo in `fdhview/static/Logo.svg` is copyright of `Filmhuis Den Haag` and must be replaced.
+The logo in `fhdhview/static/Logo.svg` is copyright of `Filmhuis Den Haag` and must be replaced.

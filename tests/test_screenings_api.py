@@ -7,9 +7,9 @@ from zoneinfo import ZoneInfo
 import pytest
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from fdhview.core.config import settings
-from fdhview.models.enums import Screen
-from fdhview.models.screening import Screening
+from fhdhview.core.config import settings
+from fhdhview.models.enums import Screen
+from fhdhview.models.screening import Screening
 
 
 @pytest.mark.asyncio

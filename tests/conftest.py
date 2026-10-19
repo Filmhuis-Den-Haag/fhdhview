@@ -11,8 +11,8 @@ from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 from sqlmodel import SQLModel
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from fdhview.api.deps import get_session
-from fdhview.main import app
+from fhdhview.api.deps import get_session
+from fhdhview.main import app
 
 test_engine = create_async_engine("sqlite+aiosqlite:///:memory:", echo=False)
 test_session_maker = async_sessionmaker(test_engine, class_=AsyncSession, expire_on_commit=False)

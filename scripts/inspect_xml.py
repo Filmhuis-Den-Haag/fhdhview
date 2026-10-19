@@ -3,7 +3,7 @@
 
 from pathlib import Path
 
-from fdhview.services.screenwriter.schema import AAMPos
+from fhdhview.services.screenwriter.schema import AAMPos
 
 
 def read_xml():

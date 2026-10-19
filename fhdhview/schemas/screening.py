@@ -5,7 +5,7 @@ from datetime import datetime
 
 from sqlmodel import SQLModel
 
-from fdhview.models.enums import KijkWijzer, Screen
+from fhdhview.models.enums import KijkWijzer, Screen
 
 
 class ScreeningRead(SQLModel):

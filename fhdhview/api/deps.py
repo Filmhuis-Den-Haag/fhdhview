@@ -8,8 +8,8 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from fdhview.core.config import settings
-from fdhview.core.database import async_session
+from fhdhview.core.config import settings
+from fhdhview.core.database import async_session
 
 security = HTTPBasic()
 

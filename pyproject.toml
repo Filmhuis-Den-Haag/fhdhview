@@ -1,5 +1,5 @@
 [project]
-name = "fdhview"
+name = "fhdhview"
 version = "0.1.0"
 description = "Filmhuis Den Haag schedule viewer"
 authors = [

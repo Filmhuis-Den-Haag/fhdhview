@@ -5,7 +5,7 @@ from xml.etree import ElementTree as ET
 
 from pydantic import ValidationError
 
-from fdhview.services.screenwriter.schema import AAMPos
+from fhdhview.services.screenwriter.schema import AAMPos
 
 
 class XmlParseError(Exception):
