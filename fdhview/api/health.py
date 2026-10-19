@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Filmhuis Den Haag
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 from fastapi import APIRouter, status
 from pydantic import BaseModel
 
@@ -15,7 +18,6 @@ class HealthCheck(BaseModel):
 
 @router.get(
     "/",
-    tags=["healthcheck"],
     summary="Perform a Health Check",
     response_description="Return HTTP Status Code 200 (OK)",
     status_code=status.HTTP_200_OK,
