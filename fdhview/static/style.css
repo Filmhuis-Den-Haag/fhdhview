@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("/static/fonts/figtree-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: italic;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("/static/fonts/figtree-italic-latin.woff2") format("woff2");
+}
+
 :root {
   --bg: #dfe2e9;
   --bg-side: #a8adb1;

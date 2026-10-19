@@ -8,7 +8,7 @@ function hhmm(iso) {
 // map kijkwijzer codes to /static/<name>.png
 function kijkwijzerIcons(codes) {
   return (codes || []).map(c =>
-    `<img class="kijkwijzer" src="/static/${c}.png" alt="${c}">`
+    `<img class="kijkwijzer" src="/static/kw/${c}.png" alt="${c}">`
   ).join("");
 }
 
