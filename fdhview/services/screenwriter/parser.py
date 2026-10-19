@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: 2026 Filmhuis Den Haag
-# SPDX-License-Identifier:
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
 from xml.etree import ElementTree as ET
 

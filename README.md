@@ -36,8 +36,8 @@ docker compose -f docker/docker-compose.yml up
 
 ## License
 
-The code for this repository is available under the <choose_license>.
+The code for this repository is available under the `GNU Affero General Public License v3.0 or later`.
 
-Figtree fonts in `fdhview/static/fonts/` are under the Open Font License.
+Figtree fonts in `fdhview/static/fonts/` are under the `SIL Open Font License, Version 1.1`.
 
-The logo in `fdhview/static/Logo.svg` is copyright of Filmhuis Den Haag and must be replaced.
+The logo in `fdhview/static/Logo.svg` is copyright of `Filmhuis Den Haag` and must be replaced.
