@@ -20,8 +20,9 @@ poetry run uvicorn fdhview.main:app --reload
 
 ## Endpoints
 
-* GET `/admin` - upload form protected with Basic Auth.
+* GET `/admin` - upload form protected with Basic Auth
 * POST `/admin/upload` - upload endpoint protected with Basic Auth
+* GET `/health` - Health check endpoint
 * GET `/info` - serves desk info endpoint
 * GET `/api/screenings` - serves JSON with upcoming 10 films for today
 * GET `/api/screenings/prices` - serves JSON with pricing data

@@ -8,6 +8,7 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
 from fdhview.api.admin import router as admin_router
+from fdhview.api.health import router as health_router
 from fdhview.api.info import router as info_router
 from fdhview.api.screenings import router as screenings_router
 from fdhview.core.database import init_db
@@ -27,5 +28,6 @@ BASE_DIR = Path(__file__).resolve().parent
 app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
 
 app.include_router(admin_router)
-app.include_router(screenings_router, prefix="/api")
+app.include_router(health_router)
 app.include_router(info_router)
+app.include_router(screenings_router, prefix="/api")
