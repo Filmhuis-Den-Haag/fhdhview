@@ -5,14 +5,20 @@ from datetime import datetime
 from typing import Annotated
 from zoneinfo import ZoneInfo
 
-from pydantic import BeforeValidator
+from pydantic import BeforeValidator, PlainSerializer
 from pydantic_xml import BaseXmlModel, RootXmlModel, element, wrapped
 
 from fhdhview.core.config import settings
 
-DT = Annotated[datetime, BeforeValidator(lambda v: datetime.strptime(v, "%Y%m%d%H%M").replace(
-    tzinfo=ZoneInfo(settings.timezone)
-))]
+# DateTime annotation with timezone handling and serialization format
+# Allows both string and datetime inputs, ensuring they have the correct timezone
+DT = Annotated[datetime, BeforeValidator(
+    lambda v:
+        (datetime.strptime(v, "%Y%m%d%H%M").replace(tzinfo=ZoneInfo(settings.timezone))
+        if isinstance(v, str)
+        else (v.replace(tzinfo=ZoneInfo(settings.timezone)))
+    )), PlainSerializer(lambda dt: dt.strftime("%Y%m%d%H%M"))
+]
 
 
 class Session(BaseXmlModel, tag='session'):
