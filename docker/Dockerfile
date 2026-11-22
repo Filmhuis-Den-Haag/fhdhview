@@ -22,9 +22,9 @@ RUN adduser --disabled-password --gecos "" appuser
 
 WORKDIR /app
 
-COPY --from=builder /app/.venv /app/.venv
 COPY --from=builder /app/pyproject.toml /app/poetry.lock ./
 COPY . /app
+COPY --from=builder /app/.venv /app/.venv
 
 RUN mkdir -p /data && chown appuser:appuser /data
 RUN apt update && apt install -y curl
