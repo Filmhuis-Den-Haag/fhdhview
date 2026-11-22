@@ -3,6 +3,7 @@
 
 from xml.etree import ElementTree as ET
 
+from lxml.etree import XMLSyntaxError
 from pydantic import ValidationError
 
 from fhdhview.services.screenwriter.schema import AAMPos
@@ -16,5 +17,5 @@ def parse_screenwriter_xml(content: bytes | str) -> AAMPos:
     """Parser raw ScreenWriter XML into validated Pydantic models."""
     try:
         return AAMPos.from_xml(content)
-    except (ValidationError, ET.ParseError) as e:
+    except (ValidationError, ET.ParseError, XMLSyntaxError) as e:
         raise XmlParseError(f"Failed to parse ScreenWriter XML: {e}") from e

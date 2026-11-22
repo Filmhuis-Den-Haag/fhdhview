@@ -11,7 +11,7 @@ from fhdhview.services.screenwriter.schema import AAMPos
 
 
 def test_xml():
-    xml = Path('tests/data/minimal.xml').read_text()
+    xml = Path('tests/data/minimal.xml').read_bytes()
     data = AAMPos.from_xml(xml)
 
     sessions = data.sessions.root
@@ -23,7 +23,7 @@ def test_xml():
 
 
 def test_broken_xml():
-    xml = Path('tests/data/broken.xml').read_text()
+    xml = Path('tests/data/broken.xml').read_bytes()
     with pytest.raises(ValueError):
         AAMPos.from_xml(xml)
 

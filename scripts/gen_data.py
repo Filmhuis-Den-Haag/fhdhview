@@ -1,4 +1,4 @@
-from datetime import UTC, datetime, timedelta
+from datetime import datetime, timedelta
 from random import randint, sample
 from zoneinfo import ZoneInfo
 
