@@ -53,4 +53,4 @@ async def test_infodesk_filters_past(
 async def test_get_screening_prices(client):
     response = client.get("/api/screenings/prices")
     assert response.status_code == 200
-    assert response.json() == settings.prices
+    assert response.json() == settings.prices.model_dump(mode="json")

@@ -9,7 +9,7 @@ from sqlmodel import col, select
 from sqlmodel.ext.asyncio.session import AsyncSession
 
 from fhdhview.api.deps import get_session
-from fhdhview.core.config import settings
+from fhdhview.core.config import PriceTable, settings
 from fhdhview.models.screening import Screening
 from fhdhview.schemas.screening import ScreeningRead
 
@@ -40,8 +40,8 @@ async def get_infodesk_screenings(
 
 @router.get(
     "/prices",
-    response_model=dict,
+    response_model=PriceTable,
     summary="Get pricing information"
 )
-async def get_screening_prices() -> dict:
+async def get_screening_prices() -> PriceTable:
     return settings.prices

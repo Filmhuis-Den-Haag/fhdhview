@@ -131,4 +131,22 @@ body {
 .sidebar h2 { margin-top: 56px; font-size: 28px; font-weight: 600; margin-bottom: 14px; }
 .price-row { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 9px; font-size: 20px; }
 .price-row .price { white-space: nowrap; }
+
+/* upcoming-price column: the container is the grid so both price columns keep
+   a shared width and every row lines up */
+#prijzen.has-new {
+  display: grid;
+  grid-template-columns: 1fr max-content max-content;
+  column-gap: 12px;
+  row-gap: 9px;
+  align-items: baseline;
+  /* the flat cells no longer sit in .price-row, so they don't inherit its 20px */
+  font-size: 20px;
+  line-height: normal;
+}
+#prijzen.has-new > .price { text-align: right; white-space: nowrap; }
+#prijzen.has-new > .price.new { opacity: .55; }
+.price-head { font-size: 15px; opacity: .55; }
+.price-head.right { text-align: right; }
+
 .sidebar h3 { margin-top: 34px; font-size: 20px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
