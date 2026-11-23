@@ -30,4 +30,4 @@ jobs:
           poetry install
           poetry run ruff check
           poetry run mypy .
-          poetry run pytest
+          poetry run pytest --cov=fhdhview
