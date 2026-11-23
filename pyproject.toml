@@ -1,9 +1,9 @@
 [project]
 name = "fhdhview"
-version = "0.1.0"
+version = "0.2.0"
 description = "Filmhuis Den Haag schedule viewer"
 authors = [
-    {name = "Your Name",email = "you@example.com"}
+    {name = "Alexander Chalikiopoulos", email = "developer@wasted.audio"}
 ]
 readme = "README.md"
 requires-python = ">=3.13"
@@ -27,6 +27,7 @@ dev = [
     "pytest-asyncio (>=1.4.0,<2.0.0)",
     "faker (>=40.44.0,<41.0.0)",
     "lxml-stubs (>=0.5.1,<0.6.0)",
+    "pytest-cov (>=7.1.0,<8.0.0)",
 ]
 
 
