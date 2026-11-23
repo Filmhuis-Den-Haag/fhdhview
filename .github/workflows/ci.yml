@@ -1,0 +1,33 @@
+name: FHDHView CI
+
+on: [push, pull_request]
+
+jobs:
+
+  test:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        python-version: ['3.13', '3.14', '3.15']
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          lfs: true
+          submodules: true
+      - name: Initialize lfs
+        run: git lfs pull
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install -U poetry
+      - name: Run poetry
+        run: |
+          poetry install
+          poetry run ruff check
+          poetry run mypy .
+          poetry run pytest
